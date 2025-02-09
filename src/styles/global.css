@@ -171,11 +171,12 @@ body {
   }
   .edit-button{
     margin-top: 8px;
-
+    cursor: pointer;
   }
   .delete-button{
     margin-top: 8px;
     margin-left: 8px;
+    cursor: pointer;
   }
   .loading {
     display: flex;
