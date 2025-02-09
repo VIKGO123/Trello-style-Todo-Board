@@ -1,7 +1,5 @@
 // src/components/ErrorBoundary/ErrorBoundary.tsx
 import { Component, ErrorInfo, ReactNode } from 'react';
-import './ErrorBoundary.css'; // Import the CSS for styling
-
 interface Props {
   children: ReactNode;
 }
