@@ -6,9 +6,9 @@ Below is a refined, detailed README for your Todo Board application:
 
 A responsive Kanban-style task management application inspired by Trello, built with React and TypeScript. Manage your tasks across different status lanes with intuitive drag-and-drop functionality and real-time updates.
 
-![Todo Board Demo]
+Todo Board Demo
 ![alt text](Todo-App.png)
-![alt text](Todo-App-1.png)
+![alt text](Todo-App-Bottom.png)
 
 ---
 
@@ -275,9 +275,3 @@ The application leverages the DummyJSON Todo API to manage tasks.
 - **Drag and Drop:** Powered by [@hello-pangea/dnd](https://www.npmjs.com/package/@hello-pangea/dnd)
 - **Build System:** Vite
 - **Languages:** React, TypeScript, CSS
-
----
-
-This README provides comprehensive details about the Todo Board application, including its features, architecture, setup instructions, usage guidelines, and planned enhancements. Enjoy managing your tasks with this Trello-inspired board!
-
----
