@@ -1,0 +1,31 @@
+/* src/components/AddTodo/AddTodo.css */
+.add-todo-form {
+    margin: 2rem 0;
+    display: flex;
+    gap: 1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .todo-input {
+    flex: 1;
+    padding: 0.8rem;
+    border: 2px solid #00b894;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  .add-button {
+    padding: 0.8rem 1.5rem;
+    background-color: #00b894;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .add-button:hover {
+    background-color: #00a383;
+  }

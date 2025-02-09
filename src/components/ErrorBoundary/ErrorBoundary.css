@@ -1,0 +1,28 @@
+/* src/components/ErrorBoundary/ErrorBoundary.css */
+.error-boundary {
+    padding: 2rem;
+    text-align: center;
+    background-color: #ffeaa7;
+    border-radius: 8px;
+    margin: 2rem;
+  }
+  
+  .error-message {
+    color: #d63031;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .reload-button {
+    padding: 0.8rem 1.5rem;
+    background-color: #d63031;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .reload-button:hover {
+    background-color: #c02929;
+  }
