@@ -36,13 +36,6 @@ const TodoCard = ({ todo, index }: TodoCardProps) => {
         >
           {isEditing ? (
             <div className="edit-container">
-              {/* <input
-                type="text"
-                value={editedText}
-                onChange={(e) => setEditedText(e.target.value)}
-                className="edit-input"
-                autoFocus
-              /> */}
               <textarea
                 value={editedText}
                 onChange={(e) => setEditedText(e.target.value)}

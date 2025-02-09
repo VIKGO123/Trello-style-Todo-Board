@@ -107,6 +107,10 @@ body {
     background-color: #f8f9fa;
     border-radius: 4px;
   }
+  .cards-container{
+    min-height: calc(100% - 32px);
+  }
+
   
   /* Responsive Design */
   @media (max-width: 768px) {
