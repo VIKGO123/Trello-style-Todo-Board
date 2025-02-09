@@ -1,8 +1,5 @@
-Below is a refined, detailed README for your Todo Board application:
 
----
-
-# Todo Board - Trello-style Task Management
+# Todo Board - Trello-style
 
 A responsive Kanban-style task management application inspired by Trello, built with React and TypeScript. Manage your tasks across different status lanes with intuitive drag-and-drop functionality and real-time updates.
 
