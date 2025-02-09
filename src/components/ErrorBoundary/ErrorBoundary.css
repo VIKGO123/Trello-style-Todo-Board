@@ -1,10 +1,12 @@
-/* src/components/ErrorBoundary/ErrorBoundary.css */
 .error-boundary {
     padding: 2rem;
     text-align: center;
-    background-color: #ffeaa7;
     border-radius: 8px;
     margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
   .error-message {
@@ -26,3 +28,4 @@
   .reload-button:hover {
     background-color: #c02929;
   }
+  

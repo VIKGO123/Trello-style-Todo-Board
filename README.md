@@ -10,6 +10,11 @@ Todo Board Demo
 ![alt text](Todo-App.png)
 ![alt text](Todo-App-Bottom.png)
 
+When there is some application rendering error because of some issue
+
+Fallback UI 
+![alt text](error.png)
+
 ---
 
 ## Table of Contents

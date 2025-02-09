@@ -16,7 +16,9 @@ const AppContent = () => {
   }, [state.currentPage, refreshTodos]);
 
   if (state.isLoading) return <div className="loading">Loading todos...</div>;
-  if (state.error) return <div className="error">Error: {state.error}</div>;
+  if (state.error) {
+    throw new Error(state.error);
+  }
 
   return (
     <div className="app-container">
@@ -36,11 +38,11 @@ const AppContent = () => {
 };
 
 const App = () => (
-  <TodoProvider>
-    <ErrorBoundary>
-      <AppContent />
-    </ErrorBoundary>
+  <ErrorBoundary>
+  <TodoProvider>  
+      <AppContent />  
   </TodoProvider>
+  </ErrorBoundary>
 );
 
 export default App;
