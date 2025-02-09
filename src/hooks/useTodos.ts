@@ -62,6 +62,7 @@ export const useTodos = () => {
       dispatch({ type: 'DELETE_TODO', payload: id });
     } catch (error) {
       console.error('Failed to delete todo', error);
+      dispatch({ type: 'DELETE_TODO', payload: id }); //just added to make sure new todo are deleted to because the api return an error for new todos
     }
   }, [dispatch]);
 
