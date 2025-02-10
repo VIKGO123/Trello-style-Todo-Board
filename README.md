@@ -101,10 +101,15 @@ When there is an application rendering error due to an issue, a fallback UI is d
 2. **Install Dependencies**
 
    ```bash
-   npm install
+   npm install @hello-pangea/dnd  or npm install @hello-pangea/dnd --legacy-peer-deps
+   npm install or npm install  --legacy-peer-deps
+
    ```
    or, if you prefer yarn:
    ```bash
+
+   yarn add @hello-pangea/dnd
+
    yarn install
    ```
 
