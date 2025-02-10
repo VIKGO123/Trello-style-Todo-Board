@@ -3,13 +3,12 @@
 
 A responsive Kanban-style task management application inspired by Trello, built with React and TypeScript. Manage your tasks across different status lanes with intuitive drag-and-drop functionality and real-time updates.
 
-Todo Board Demo(Todo Board Live Url : https://vikgo123.github.io/Trello-style-Todo-Board/ )
-![alt text](Todo-App.png)
+**Todo Board Demo**  
+(Todo Board Live URL: [https://vikgo123.github.io/Trello-style-Todo-Board/](https://vikgo123.github.io/Trello-style-Todo-Board/))  
+![alt text](Todo-App.png)  
 ![alt text](Todo-App-Bottom.png)
 
-When there is some application rendering error because of some issue
-
-Fallback UI 
+When there is an application rendering error due to an issue, a fallback UI is displayed:  
 ![alt text](error.png)
 
 ---
@@ -23,6 +22,7 @@ Fallback UI
 - [Usage](#usage)
 - [API Integration](#api-integration)
 - [Optimizations](#optimizations)
+- [Design Decisions & Patterns](#design-decisions--patterns)
 - [Known Limitations](#known-limitations)
 - [Future Improvements](#future-improvements)
 - [Credits](#credits)
@@ -241,12 +241,37 @@ The application leverages the DummyJSON Todo API to manage tasks.
 
 ---
 
+## Design Decisions & Patterns
+
+- **Component-Based Architecture:**  
+  The entire UI is built using React's component model, allowing for modular, reusable pieces that encapsulate both logic and presentation.
+
+- **Container/Presentational Pattern:**  
+  Business logic is isolated in container components (using React Context and custom hooks), while presentational components focus solely on rendering the UI. This separation improves maintainability and testability.
+
+- **React Context API & Custom Hooks:**  
+  Global state management is achieved using the Context API, which is further abstracted by custom hooks (e.g., `useTodos`) to manage API calls and state updates in a clean and reusable manner.
+
+- **Error Boundaries:**  
+  To ensure graceful degradation, error boundaries are used to catch rendering errors and display fallback UIs, thus preventing the entire application from crashing.
+
+- **Lazy Loading & Code Splitting:**  
+  Components are dynamically imported using React’s `lazy` and `Suspense` to reduce the initial bundle size and improve performance.
+
+- **Optimistic UI & Client-Side Synchronization:**  
+  Changes in the UI (such as task movements) are reflected immediately on the client side, with asynchronous API calls synchronizing the state. This approach provides a smooth user experience even when network latency is present.
+
+- **Design for Responsiveness:**  
+  A mobile-first, responsive design ensures the application works well across various devices and screen sizes.
+
+---
+
 ## Known Limitations
 
 - **API Constraints:**
   - The **"In Progress"** status is primarily managed on the client side.
   - User authentication is not supported.
-  - Data is sourced from DummyJSON (i.e., mock data).
+  - Data is sourced from DummyJSON (i.e., mock data), which might not reflect real-world scenarios.
 
 - **Pagination:**
   - Fixed page size (30 items per page) with no option for custom page numbers.
