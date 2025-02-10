@@ -1,8 +1,8 @@
 export interface Todo {
     id: number;
     todo: string;
-    completed: boolean;
+    completed?: boolean;
     userId: number;
     inProgress?: boolean;
-    status:string
+    status?:string
   }

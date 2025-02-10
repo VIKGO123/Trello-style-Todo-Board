@@ -1,12 +1,12 @@
-import { lazy, Suspense, useEffect } from 'react';
-import { TodoProvider } from './context/TodoContext';
-import { useTodoContext } from './context/TodoContext';
-import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
-import Pagination from './components/Pagination/Pagination';
-import './styles/global.css';
+import { lazy, Suspense, useEffect } from "react";
+import { TodoProvider } from "./context/TodoContext";
+import { useTodoContext } from "./context/TodoContext";
+import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
+import Pagination from "./components/Pagination/Pagination";
+import "./styles/global.css";
 
-const AddTodo = lazy(() => import('./components/AddTodo/AddTodo'));
-const Board = lazy(() => import('./components/Board/Board'));
+const AddTodo = lazy(() => import("./components/AddTodo/AddTodo"));
+const Board = lazy(() => import("./components/Board/Board"));
 
 const AppContent = () => {
   const { state, dispatch, refreshTodos } = useTodoContext();
@@ -30,7 +30,7 @@ const AppContent = () => {
           currentPage={state.currentPage}
           totalItems={state.totalTodos}
           pageSize={state.pageSize}
-          onPageChange={(page) => dispatch({ type: 'SET_PAGE', payload: page })}
+          onPageChange={(page) => dispatch({ type: "SET_PAGE", payload: page })}
         />
       </Suspense>
     </div>
@@ -38,11 +38,11 @@ const AppContent = () => {
 };
 
 const App = () => (
-  <ErrorBoundary>
-  <TodoProvider>  
-      <AppContent />  
+  <TodoProvider>
+    <ErrorBoundary>
+      <AppContent />
+    </ErrorBoundary>
   </TodoProvider>
-  </ErrorBoundary>
 );
 
 export default App;

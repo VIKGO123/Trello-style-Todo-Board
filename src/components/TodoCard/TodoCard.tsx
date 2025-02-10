@@ -15,7 +15,7 @@ const TodoCard = ({ todo, index }: TodoCardProps) => {
 
   const handleSave = async () => {
     if (editedText.trim() && editedText !== todo.todo) {
-      await editTodo(todo.id, { todo: editedText });
+       editTodo(todo.id, { todo: editedText },todo);
     }
     setIsEditing(false);
   };
